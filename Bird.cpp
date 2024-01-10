@@ -9,13 +9,6 @@ Bird::Bird(string &name, string &color, string &diet, string &habitat, string &s
         Animal(name, color, diet, habitat, sounds, isPet, age, weight, height), wingspan(wingspan){}
 
 Bird::Bird(const Bird& other) : Animal(other), wingspan(other.wingspan) {}
-/*
- * Constructeur de copie qui va prendre un animal, copier ses caractéristiques
- * auquel on va ajouter la couleur de fourrure furColor
- * ce qui donnera un Mammal
- */
-
-
 
 void Bird::printInfo() {
     // Animal::printInfo(); // plus simple mais ne correspond par à l'output voulu
