@@ -52,5 +52,3 @@ void Mammal::printInfo() {
     cout << endl << "Weight : " << weight << "kg";
     cout << endl << "Height : " << height << "cm";
 }
-
-
