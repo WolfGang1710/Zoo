@@ -23,7 +23,7 @@ void Bird::printInfo() {
     double weight = Animal::getWeight();
     double height = Animal::getHeight();
 
-    cout << endl << "Animal of type Mammal:";
+    cout << endl << "Animal of type Bird:";
     cout << endl << "Name : " << name;
     cout << endl << "Color : " << color;
     cout << endl << "Diet" << diet;
