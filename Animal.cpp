@@ -109,3 +109,15 @@ void Animal::printInfo() {
     cout << endl << "Weight : " << weight;
     cout << endl << "Height : " << height;
 }
+
+Animal::Animal(const Animal &other) {
+        name = other.name;
+        color = other.color;
+        diet = other.diet;
+        habitat = other.habitat;
+        sounds = other.sounds;
+        isPet = other.isPet;
+        age = other.age;
+        weight = other.weight;
+        height = other.height;
+}
