@@ -36,7 +36,7 @@ void Zoo::addAnimal(Animal newAnimal) {
         if(searchAnimalByName(newAnimal.getName())==-1) {
             cout << endl << "Erreur : un animal possède déjà ce nom dans le Zoo";
         } else {
-            lower_bound() //https://en.cppreference.com/w/cpp/algorithm/lower_bound
+            lower_bound(); // https://en.cppreference.com/w/cpp/algorithm/lower_bound
         }
     }
 }

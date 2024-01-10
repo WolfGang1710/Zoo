@@ -13,7 +13,7 @@ class Zoo {
 private:
     string name; // Nom du Zoo
     static int MAX_CAPACITY; // la capacite maximale du Zoo
-    int size;
+    int size; // Choix pour vérifier que la capacité du Zoo n'est pas dépassée
     vector<Animal*> animals; // Vecteur d'animaux de la class `Animal`.
 public:
     Zoo();
@@ -24,6 +24,10 @@ public:
     void setName(const string &name);
 
     void addAnimal(Animal newAnimal);
+    size_t searchAnimalByName(string name); // size_t est choisie pour des questions d'utilisation de mémoire
+    void removeAnimalByName(string name);
+    void listAnimals();
+    double averageAgeForType(string type); // int ou double, dépend de la précision voulue
 
 };
 

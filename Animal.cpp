@@ -4,6 +4,9 @@
 
 #include "headers/Animal.h"
 
+// ********************** CONSTRUCTEURS ********************** //
+
+// Valué
 Animal::Animal(string &_name, string &_color, string &_diet, string &_habitat, string &_sounds, bool _isPet, int _age,
                double _weight, double _height):
                name(_name), color(_color), diet(_diet), habitat(_habitat), sounds(_sounds),
@@ -12,6 +15,7 @@ Animal::Animal(string &_name, string &_color, string &_diet, string &_habitat, s
 {
 }
 
+// * Par recopie
 Animal::Animal(const Animal &other) {
     name = other.name;
     color = other.color;
@@ -23,6 +27,8 @@ Animal::Animal(const Animal &other) {
     weight = other.weight;
     height = other.height;
 }
+
+// ********************** GETTER & SETTER ********************** //
 
 const string &Animal::getName() const {
     return name;

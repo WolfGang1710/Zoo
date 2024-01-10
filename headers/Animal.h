@@ -24,7 +24,7 @@ private:
 public:
     Animal()=default;
     Animal(string &name, string &color, string &diet, string &habitat, string &sounds,
-           bool isPet, int age, double weight, double height);
+           bool isPet, int age, double weight, double height); // string par référence pour éviter d'utiliser de la mémoire inutilement
     Animal(const Animal &other); // Constructeur de copie
 
     const string &getName() const;
