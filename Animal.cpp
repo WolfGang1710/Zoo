@@ -12,6 +12,18 @@ Animal::Animal(string &_name, string &_color, string &_diet, string &_habitat, s
 {
 }
 
+Animal::Animal(const Animal &other) {
+    name = other.name;
+    color = other.color;
+    diet = other.diet;
+    habitat = other.habitat;
+    sounds = other.sounds;
+    isPet = other.isPet;
+    age = other.age;
+    weight = other.weight;
+    height = other.height;
+}
+
 const string &Animal::getName() const {
     return name;
 }
@@ -85,39 +97,27 @@ void Animal::setHeight(double _height) {
 }
 
 void Animal::printInfo() {
-    string name = Animal::getName();
-    string color = Animal::getColor();
-    string diet = Animal::getDiet();
-    string habitat = Animal::getHabitat();
+    string _name = Animal::getName();
+    string _color = Animal::getColor();
+    string _diet = Animal::getDiet();
+    string _habitat = Animal::getHabitat();
     // string sounds = Animal::getSounds(); // not used now
-    bool isPet = Animal::isPetFunc();
-    int age = Animal::getAge();
-    double weight = Animal::getWeight();
-    double heigth = Animal::getHeight();
+    bool _isPet = Animal::isPetFunc();
+    int _age = Animal::getAge();
+    double _weight = Animal::getWeight();
+    double _height = Animal::getHeight();
 
     cout << endl << "Animal of unknown type:";
-    cout << endl << "Name : " << name;
-    cout << endl << "Color : " << color;
-    cout << endl << "Diet" << diet;
-    cout << endl << "Habitat" << habitat;
-    cout << endl << "Age : " << age << "'s old";
+    cout << endl << "Name : " << _name;
+    cout << endl << "Color : " << _color;
+    cout << endl << "Diet" << _diet;
+    cout << endl << "Habitat" << _habitat;
+    cout << endl << "Age : " << _age << "'s old";
     if(isPet){
         cout << endl << "This animal is a pet";
     } else {
         cout << endl << "This animal is not a pet";
     }
-    cout << endl << "Weight : " << weight;
-    cout << endl << "Height : " << height;
-}
-
-Animal::Animal(const Animal &other) {
-        name = other.name;
-        color = other.color;
-        diet = other.diet;
-        habitat = other.habitat;
-        sounds = other.sounds;
-        isPet = other.isPet;
-        age = other.age;
-        weight = other.weight;
-        height = other.height;
+    cout << endl << "Weight : " << _weight;
+    cout << endl << "Height : " << _height;
 }
